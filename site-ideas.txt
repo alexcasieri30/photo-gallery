@@ -1,0 +1,47 @@
+
+
+ideas for photo gallery site
+
+title bar top of page in center
+    - home, about, gallery, contact, tech (page describing how the site was built)
+
+
+
+need title page
+    - background photo? 
+    - carousel with rotating photos
+
+
+i like the idea of different random widgets all over the home page 
+
+for example:
+- a widget that appears to be at a random location on the page
+- each widget has its own theme
+
+    - carousel with rotating 10 photos with a certain theme
+    - one image fades into the next 
+    - grid of small blocks, where when you hover over one the image blows up and comes to life
+    - file cabinet type design, where there is a strip of only the tops of photos
+      and as you hover on each one, it expands down into a full photo
+        - ex: https://brand.base.org/
+
+
+Colorful scrollbar on the side like this:
+    - https://www.risingtemps.com/
+
+Some kind of effect that follows your mouse around the page
+
+infinite scroll loop? 
+
+
+plus icon in the top right corner that you can click on that adds an image to the gallery
+- superuser only
+
+https://thebitcoin.webflow.io/
+
+Theme idea:
+- stuff that appears or fades in or slides in from the sides as you scroll down 
+
+
+small 'grid' that looks like this:
+https://miromannino.github.io/Justified-Gallery/
