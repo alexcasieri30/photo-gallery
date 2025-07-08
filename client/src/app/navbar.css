@@ -1,0 +1,67 @@
+.font-terminal {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 25pt;
+}
+
+.glitch:hover {
+    animation: glitch 0.3s steps(2, end) infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 0 red, -2px 0 blue;
+    }
+
+    50% {
+        text-shadow: -2px 0 red, 2px 0 blue;
+    }
+
+    100% {
+        text-shadow: 2px 0 red, -2px 0 blue;
+    }
+}
+
+
+.navbar-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    margin: 0px;
+    padding: 0px;
+    height: 3rem;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+
+.nav-item {
+
+    /* dark tech blue */
+    color: #cbd5e1;
+    /* light gray */
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    /* cursor: pointer; */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+    user-select: none;
+}
+
+.nav-item:hover {
+    box-sizing: border-box;
+    background-color: rgba(200, 200, 200, 0.7);
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 15px rgba(14, 165, 233, 0.5);
+    /* techy cyan glow */
+    background-color: #0284c7;
+}
