@@ -1,6 +1,5 @@
 
-import NavBar from "../NavBar";
-import TypewriterTitle from "../TypewriterTitle";
+import TypewriterTitle from "../features/TypewriterTitle";
 import "./homepage.css";
 
 

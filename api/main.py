@@ -1,4 +1,5 @@
 import base64
+import os
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import boto3
@@ -31,8 +32,8 @@ class ImageServer:
         return image_bytes
 
 
-    def start_server(self):
-        self.flask_app.run(host="0.0.0.0", port=5000)
+    def start_server(self, debug):
+        self.flask_app.run(host="0.0.0.0", port=5000, debug=debug)
 
 
     def list_images(self, bucket):
@@ -70,5 +71,6 @@ class ImageServer:
 
 
 if __name__ == "__main__":
+    debug = (os.getenv("DEV") == "true")
     server = ImageServer()
-    server.start_server()
+    server.start_server(debug)

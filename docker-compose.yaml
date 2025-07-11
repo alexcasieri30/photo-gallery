@@ -1,0 +1,24 @@
+
+
+services:
+  client:
+    image: client:${VERSION:-latest}
+    build:
+      context: ./client
+    volumes:
+      - ./client/src:/usr/app/src
+    ports:
+      - "3000:3000"
+
+  api:
+    image: flask:${VERSION:-latest}
+    build:
+      context: ./api
+    volumes:
+      - ./api:/app
+    ports:
+      - "5000:5000"
+    environment:
+      DEV: true
+      AWS_ACCESS_KEY_ID: ${KEY}
+      AWS_SECRET_ACCESS_KEY: ${SECRET}

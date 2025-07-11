@@ -62,3 +62,34 @@ body {
   margin-left: 3rem;
   margin-top: 6rem;
 }
+
+.carousel-container-div {
+  height: 1500px;
+  align-items: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 100px;
+}
+
+.carousel-container-page {
+  position: relative;
+  z-index: 10;
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
+
+.frost-background {
+  width: 50%;
+  margin: auto;
+  max-width: max-content;
+}
+
+
+.homepage-feature-section {
+  border: solid 1px white;
+  margin: 200px;
+}
