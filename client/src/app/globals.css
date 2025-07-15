@@ -1,14 +1,45 @@
 @import "tailwindcss";
 
+.animated-gradient-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(45deg, #ffffff, #fdb4b4, #b6e4f9, #fbefb0, #f59cc0);
+  background-size: 600% 600%;
+  animation: gradientShift 20s ease infinite;
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 50% 100%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  75% {
+    background-position: 50% 0%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 body {
+  zoom: 75%;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 28pt;
   margin-left: 2rem;
   margin-right: 2rem;
-
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  /* Optional subtle animation */
-  background-size: 400% 400%;
+  background: white;
   animation: gradientShift 15s ease infinite;
 }
 
@@ -53,7 +84,6 @@ body {
 }
 
 .ripple:hover {
-  cursor: pointer;
   animation: ripple 1.2s ease-out forwards;
 }
 
@@ -64,11 +94,12 @@ body {
 }
 
 .carousel-container-div {
-  height: 1500px;
+  height: 1800px;
   align-items: center;
   margin-left: 20%;
   margin-right: 20%;
   padding: 100px;
+  background: radial-gradient(ellipse, #e0f7ff 0%, #a0dfff 30%, white 70%);
 }
 
 .carousel-container-page {
@@ -89,7 +120,6 @@ body {
 }
 
 
-.homepage-feature-section {
-  border: solid 1px white;
-  margin: 200px;
+img {
+  border-radius: 15px;
 }

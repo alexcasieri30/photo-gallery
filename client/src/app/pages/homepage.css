@@ -1,4 +1,22 @@
 .homepage-container {
     height: 200px;
-    width: 100%;
+    width: 800px;
+    display: flex;
+}
+
+.homepage-item {}
+
+
+.homepage-features {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 500px;
+}
+
+.homepage-feature-section {
+    max-width: 800px;
+    margin: 100px;
+    display: block;
+    /* width: 100%; */
 }

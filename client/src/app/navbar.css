@@ -31,7 +31,6 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
     margin: 0px;
     padding: 0px;
     height: 3rem;
@@ -49,7 +48,6 @@
     /* light gray */
     padding: 1rem 2rem;
     border-radius: 0.5rem;
-    /* cursor: pointer; */
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease,

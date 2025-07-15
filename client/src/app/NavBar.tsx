@@ -10,19 +10,19 @@ export default function NavBar({ setPage }) {
 
     return (
         <div className="navbar-container font-terminal" style={{ cursor: cursorSvg }}>
-            <div className="nav-item glitch" onClick={() => setPage(0)}>
+            <div className="nav-item glitch" style={{ cursor: cursorSvg }} onClick={() => setPage(0)}>
                 Home
             </div>
-            <div className="nav-item glitch" onClick={() => setPage(1)}>
+            <div className="nav-item glitch" style={{ cursor: cursorSvg }} onClick={() => setPage(1)}>
                 About
             </div>
-            <div className="nav-item glitch" onClick={() => setPage(2)}>
+            <div className="nav-item glitch" style={{ cursor: cursorSvg }} onClick={() => setPage(2)}>
                 Gallery
             </div>
-            <div className="nav-item glitch" onClick={() => setPage(3)}>
+            <div className="nav-item glitch" style={{ cursor: cursorSvg }} onClick={() => setPage(3)}>
                 Contact
             </div>
-            <div className="nav-item glitch" onClick={() => setPage(4)}>
+            <div className="nav-item glitch" style={{ cursor: cursorSvg }} onClick={() => setPage(4)}>
                 Tech
             </div>
         </div>

@@ -35,7 +35,7 @@ const ParticleTrail = () => {
       const color = colors[Math.floor(Math.random() * colors.length)];
       const shape = shapes[Math.floor(Math.random() * shapes.length)];
 
-      dot.className = `pointer-events-none fixed w-8 h-8 ${color} ${shape} opacity-80 z-50 transition duration-300 ease-out`;
+      dot.className = `pointer-events-none absolute w-8 h-8 ${color} ${shape} opacity-80 z-50 transition duration-300 ease-out`;
       dot.style.left = `${e.clientX}px`;
       dot.style.top = `${e.clientY}px`;
       dot.style.transform = "translate(-50%, -50%)";

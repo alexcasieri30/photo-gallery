@@ -45,3 +45,26 @@ Theme idea:
 
 small 'grid' that looks like this:
 https://miromannino.github.io/Justified-Gallery/
+
+
+
+Organizing photos:
+
+sections of each photo:
+
+- trip/country
+- main-object
+- number/id?
+
+example:
+- hawaii-monkeypodtree-1
+- hawaii-hike-1
+- japan-temple-1
+- chicago-sunset-1
+- chicago-sunset-2
+
+
+Photo displays:
+Idea - 
+    4 rows of photos, each row is slowly rotating in opposite directions
+ 

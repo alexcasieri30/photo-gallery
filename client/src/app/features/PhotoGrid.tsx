@@ -2,18 +2,24 @@ import "./photogrid.css";
 import { useState, useEffect } from "react";
 import Image from 'next/image';
 
-export default function ExpandRow({ imageData }) {
+export default function PhotoGrid({ imageData, theme }) {
 
     const [photos, setPhotos] = useState([])
     
     useEffect(() => {
+        const entries = Object.entries(imageData);
+        const skyPhotos = [];
 
-        if (photos.length == 0){
-            const photos = Object.values(imageData)
-            setPhotos(photos)
+        for (const [key, value] of entries) {
+            if (key.split("-")[1] === theme) {
+                skyPhotos.push(value);
+            }
         }
 
-    })
+        console.log("setting photos from grid: ", skyPhotos);
+        setPhotos(skyPhotos); 
+
+    }, [imageData, theme]);
 
     return (
         <div className="expand-row-container">
@@ -26,7 +32,6 @@ export default function ExpandRow({ imageData }) {
                         </div>)
                     })
                 }
-
             </div>
         </div>
     )

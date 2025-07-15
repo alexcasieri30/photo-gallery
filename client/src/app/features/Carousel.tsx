@@ -1,51 +1,67 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import './carousel.css';
 import { motion, AnimatePresence } from "framer-motion";
 
+import './carousel.css';
 
-export default function Carousel({ imageData }) {
+const AnimatedCarousel = ({ imageData, theme }) => {
   const [index, setIndex] = useState(0);
-  const [images, setImages] = useState([])
+  const [direction, setDirection] = useState(0);
+  const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    if (images.length == 0){
-      setImages(Object.values(imageData))
+    if (photos.length == 0){
+      const newPhotos = [];
+      for (const [key, value] of Object.entries(imageData)){
+        if (key.split("-")[1] === theme){
+          newPhotos.push(value);
+        }
+      }
+      setPhotos(newPhotos)
     }
   })
 
-  const next = () => setIndex((index + 1) % images.length);
-  const prev = () => setIndex((index - 1 + images.length) % images.length);
+  const paginate = (newDirection) => {
+    setDirection(newDirection);
+    setIndex((prev) => (prev + newDirection + photos.length) % photos.length);
+  };
 
   return (
-      <div className="relative w-full max-w-3xl mx-auto overflow-hidden rounded-3xl shadow-2xl aspect-[4/3] bg-black">      
-      <AnimatePresence>
-        <motion.img
-          key={images[index]}
-          src={images[index]}
-          alt={`Image ${index}`}
-          className="absolute inset-0 w-full h-full object-cover"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-        />
-      </AnimatePresence>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
+    <div className="carousel-container">
+      <div className="carousel-image-wrapper">
+        <AnimatePresence custom={direction}>
+          <motion.img
+            key={photos[index]}
+            src={photos[index]}
+            alt={`Slide ${index}`}
+            className="carousel-image"
+            initial={{ opacity: 0, x: direction > 0 ? 100 : -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
+            transition={{ duration: 0.5 }}
+          />
+        </AnimatePresence>
 
-      {/* Buttons */}
-      <button
-        onClick={prev}
-        className="button absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-black p-2 rounded-full shadow"
-      >
-        ←
-      </button>
-      <button 
-        onClick={next}
-        className="button absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-black p-2 rounded-full shadow"
-      >
-        →
-      </button>
+        <button onClick={() => paginate(-1)} className="carouse-nav-button left">←</button>
+        <button onClick={() => paginate(1)} className="carousel-nav-button right">→</button>
+      </div>
+
+      <div className="carousel-thumbnails">
+        {photos.map((img, i) => (
+          <div
+            key={i}
+            className={`carousel-thumb-wrapper ${i === index ? 'carousel-active' : ''}`}
+            onClick={() => {
+              setDirection(i > index ? 1 : -1);
+              setIndex(i);
+            }}
+          >
+            <img src={img} alt={`Thumb ${i}`} className="carousel-thumb-image" />
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
+
+export default AnimatedCarousel;

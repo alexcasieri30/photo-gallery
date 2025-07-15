@@ -1,0 +1,51 @@
+.scroll-gallery {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+.scroll-pair {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.scroll-image {
+    flex: 1 1 45%;
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    text-align: center;
+}
+
+.scroll-image.left {
+    transform: translateX(-80px);
+}
+
+.scroll-image.right {
+    transform: translateX(80px);
+}
+
+.scroll-image.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+}

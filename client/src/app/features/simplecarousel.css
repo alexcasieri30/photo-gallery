@@ -1,0 +1,150 @@
+.simple-carousel {
+    max-width: 600px;
+    margin: 100px auto;
+    font-family: system-ui, sans-serif;
+    user-select: none;
+}
+
+.simple-carousel-main-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    background: #111;
+}
+
+.simple-carousel-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Incoming slide from right (next) */
+.slide-in-right {
+    transform: translateX(100%);
+    animation: slideInRight 0.5s forwards;
+}
+
+/* Incoming slide from left (prev) */
+.slide-in-left {
+    transform: translateX(-100%);
+    animation: slideInLeft 0.5s forwards;
+}
+
+/* Outgoing slide to left (next) */
+.slide-out-left {
+    animation: slideOutLeft 0.5s forwards;
+}
+
+/* Outgoing slide to right (prev) */
+.slide-out-right {
+    animation: slideOutRight 0.5s forwards;
+}
+
+/* Keyframes */
+@keyframes slideInRight {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutLeft {
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutRight {
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.simple-carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255 255 255 / 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    color: #222;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    user-select: none;
+}
+
+.simple-carousel-arrow:hover {
+    background: rgba(255 255 255 / 0.95);
+}
+
+.simple-carousel-arrow.left {
+    left: 10px;
+}
+
+.simple-carousel-arrow.right {
+    right: 10px;
+}
+
+.simple-carousel-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.simple-thumbnail-wrapper {
+    width: 80px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.simple-thumbnail-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.simple-thumbnail-wrapper.active {
+    border-color: #3b82f6;
+    /* blue-500 */
+    transform: scale(1.1);
+}
+
+.simple-thumbnail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}

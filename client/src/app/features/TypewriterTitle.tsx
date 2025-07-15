@@ -1,5 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
+import "./typewriter.css";
+
+
 
 const TypewriterTitle = ({ text, speed = 100 }: { text: string; speed?: number }) => {
   const [displayedText, setDisplayedText] = useState("");
@@ -15,7 +18,7 @@ const TypewriterTitle = ({ text, speed = 100 }: { text: string; speed?: number }
   }, [text, speed]);
 
   return (
-    <h1 className="text-xl sm:text-3xl md:text-5xl font-mono text-green-400 tracking-widest title-text">
+    <h1 className="header-text">
       {displayedText}
       <span className="animate-pulse">|</span>
     </h1>
