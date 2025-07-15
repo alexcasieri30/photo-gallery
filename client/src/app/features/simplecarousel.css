@@ -26,29 +26,24 @@
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Incoming slide from right (next) */
 .slide-in-right {
     transform: translateX(100%);
     animation: slideInRight 0.5s forwards;
 }
 
-/* Incoming slide from left (prev) */
 .slide-in-left {
     transform: translateX(-100%);
     animation: slideInLeft 0.5s forwards;
 }
 
-/* Outgoing slide to left (next) */
 .slide-out-left {
     animation: slideOutLeft 0.5s forwards;
 }
 
-/* Outgoing slide to right (prev) */
 .slide-out-right {
     animation: slideOutRight 0.5s forwards;
 }
 
-/* Keyframes */
 @keyframes slideInRight {
     to {
         transform: translateX(0);
