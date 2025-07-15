@@ -1,8 +1,10 @@
 .carousel-container {
-    /* margin: 0 auto; */
+    background: radial-gradient(circle, #6bb2ff 0%, #007bff 10%, rgba(255, 255, 255, 0) 60%);
     text-align: center;
     padding: 40px 0;
-    max-width: 400px;
+    max-width: 600px;
+    width: 600;
+    padding: 100px;
 }
 
 .carousel-image-wrapper {

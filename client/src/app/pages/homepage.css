@@ -1,6 +1,6 @@
 .homepage-container {
     height: 200px;
-    width: 800px;
+    width: 1000px;
     display: flex;
 }
 
@@ -15,8 +15,8 @@
 }
 
 .homepage-feature-section {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 100px;
     display: block;
-    /* width: 100%; */
+    margin-bottom: 300px;
 }

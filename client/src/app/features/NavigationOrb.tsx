@@ -1,10 +1,10 @@
 import "./navigationorb.css";
 
 const sections = [
-  { id: 'about', label: '🧠 About' },
-  { id: 'gallery', label: '🖼️ Gallery' },
-  { id: 'projects', label: '⚙️ Projects' },
-  { id: 'contact', label: '📬 Contact' },
+  { id: 'monkeypod', label: 'Trees' },
+  { id: 'sky', label: 'Sky' },
+  { id: 'city', label: 'City' },
+  { id: 'chicago-city', label: 'Chicago City' },
 ];
 
 export default function NavigationOrb() {

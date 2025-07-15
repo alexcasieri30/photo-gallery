@@ -1,4 +1,7 @@
-.expand-row-container {}
+.expand-row-container {
+    display: flex;
+    justify-content: right;
+}
 
 .expand-row {
     display: grid;

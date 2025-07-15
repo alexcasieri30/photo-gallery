@@ -43,7 +43,7 @@ export default function Home() {
 
       </div>
       <div>
-        <NavBar setPage={setPage}/>
+        <NavBar page={page} setPage={setPage}/>
       </div>
       <div className="homepage-container">
         
