@@ -68,3 +68,33 @@ Photo displays:
 Idea - 
     4 rows of photos, each row is slowly rotating in opposite directions
  
+
+
+Pages:
+
+Home:
+    - Links from preview feature to the full gallery on the "Gallery" page
+    "See more" under the feature type of thing
+
+    - AI generated caption for each photo
+    - Generate caption on user click or interaction
+
+
+About:
+    About me? 
+
+
+Contact:
+    Simple contact page
+    socials + Links
+
+tech
+    About the way that the website was set up 
+    Really cool Idea:
+        - Some kind of toggle slider that alters the formatting of the page
+        1. 1 format is the unstyled format
+            - looks purposefully raw, unstyled, black + white, etc
+        2. 2nd format is the styled format with css
+
+
+

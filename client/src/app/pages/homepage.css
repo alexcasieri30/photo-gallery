@@ -20,3 +20,19 @@
     display: block;
     margin-bottom: 300px;
 }
+
+.see-more {
+    height: 40px;
+    color: rgba(100, 149, 237, 0.7);
+    /* Cornflower Blue */
+    font-size: 18pt;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.see-more-text:hover {
+    text-decoration: underline;
+}

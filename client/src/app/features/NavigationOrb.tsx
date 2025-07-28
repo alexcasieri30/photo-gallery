@@ -3,7 +3,7 @@ import "./navigationorb.css";
 const sections = [
   { id: 'monkeypod', label: 'Trees' },
   { id: 'sky', label: 'Sky' },
-  { id: 'city', label: 'City' },
+  { id: 'Japan', label: 'Japan' },
   { id: 'chicago-city', label: 'Chicago City' },
 ];
 

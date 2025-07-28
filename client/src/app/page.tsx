@@ -15,7 +15,6 @@ export default function Home() {
   const cursorSvg = `url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTAiIGZpbGw9ImdyYXkiIGZpbGwtb3BhY2l0eT0iMC40Ii8+PC9zdmc+") 16 16, auto`;
   const [page, setPage] = useState(0)
   const [imgData, setImgData] = useState(null)
-  const [images, setImages] = useState([])
 
   useEffect(() => {
     if (!imgData){
@@ -48,7 +47,7 @@ export default function Home() {
       <div className="homepage-container">
         
         {
-          page==0 && imgData && <HomePage imgData={imgData}/>
+          page==0 && imgData && <HomePage page={page} setPage={setPage} imgData={imgData}/>
         }
         {
           page==1 && <AboutPage/>

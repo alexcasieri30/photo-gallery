@@ -18,12 +18,10 @@ const ScrollPair = ({ leftSrc, rightSrc }) => {
     <div ref={ref} className="scroll-pair">
       <div className={`scroll-image left ${visible ? 'visible' : ''}`}>
         <img src={leftSrc} alt="Left" />
-        <p className="caption">hello world</p>
       </div>
       {rightSrc && (
         <div className={`scroll-image right ${visible ? 'visible' : ''}`}>
           <img src={rightSrc} alt="Right" />
-          <p className="caption">hello world</p>
         </div>
       )}
     </div>
@@ -37,7 +35,7 @@ const ScrollGallery = ({ imageData, theme }) => {
     const entries = Object.entries(imageData);
     const themePhotos = [];
     for (const [key, value] of entries) {
-      if (key.split("-")[1] === theme) {
+      if (key.split("-")[0] === theme) {
         themePhotos.push(value);
       }
     }

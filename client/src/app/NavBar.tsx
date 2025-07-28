@@ -1,8 +1,8 @@
-
-
+"use client"
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import "./navbar.css";
+
 
 export default function NavBar({ page, setPage }) {
    
@@ -13,6 +13,7 @@ export default function NavBar({ page, setPage }) {
             <div className={page==0?"nav-item glitch active":"nav-item glitch"} style={{ cursor: cursorSvg }} onClick={() => setPage(0)}>
                 Home
             </div>
+     
             <div className={page==1?"nav-item glitch active":"nav-item glitch"} style={{ cursor: cursorSvg }} onClick={() => setPage(1)}>
                 About
             </div>
@@ -22,6 +23,7 @@ export default function NavBar({ page, setPage }) {
             <div className={page==3?"nav-item glitch active":"nav-item glitch"} style={{ cursor: cursorSvg }} onClick={() => setPage(3)}>
                 Contact
             </div>
+         
             <div className={page==4?"nav-item glitch active":"nav-item glitch"} style={{ cursor: cursorSvg }} onClick={() => setPage(4)}>
                 Tech
             </div>
